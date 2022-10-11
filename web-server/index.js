@@ -6,6 +6,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/v1/users', function (req, res) {
+  console.log(req);
   res.send({
     name: "Mike",
     age: 30
