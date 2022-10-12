@@ -14,7 +14,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.post('/api/v1/quiz', function (req, res) {
   const answer = req.body.answer;
-  res.send(answer);
+  if (answer === "2") {
+    res.send("正解！");
+  } else {
+    res.send("不正解！");
+  }
 });
 
 app.get('/api/v1/users', function (req, res) {
